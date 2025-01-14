@@ -45,3 +45,4 @@ ls ./data/processed/user_logs/* >> ./data/inventory.txt
 ###########################################
 
 echo "Project setup is complete!"
+###adding file
