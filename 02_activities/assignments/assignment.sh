@@ -29,9 +29,9 @@ mv rawdata data/raw
 ls data/raw
 
 # 4. In ./data/processed, create the following directories: server_logs, user_logs, and event_logs
-mkdir data/processed/server_logs
-mkdir data/processed/user_logs
-mkdir data/processed/event_logs
+mkdir -p data/processed/server_logs
+mkdir -p data/processed/user_logs
+mkdir -p data/processed/event_logs
 # 5. Copy all server log files (files with "server" in the name AND a .log extension) from ./data/raw to ./data/processed/server_logs
 cp data/raw/server_*.log data/processed/server_logs
 # 6. Repeat the above step for user logs and event logs
@@ -41,7 +41,7 @@ cp data/raw/user_*.log ./data/processed/user_logs
 rm data/processed/user_logs/*ipaddr*
 rm data/raw/*ipaddr*
 # 8. Create a file named ./data/inventory.txt that lists all the files in the subfolders of ./data/processed
-ls data/processed/event_logs/* >> data/inventory.txt
+ls data/processed/user_logs/* >> data/inventory.txt
 ls data/processed/server_logs/* >> data/inventory.txt
 ls data/processed/user_logs/* >> data/inventory.txt
 
